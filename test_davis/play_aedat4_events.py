@@ -3,7 +3,7 @@ import cv2 as cv
 from datetime import timedelta
 
 # Open a file
-reader = dv.io.MonoCameraRecording("./test_davis/data/getAllDataFromCamera_3.aedat4")
+reader = dv.io.MonoCameraRecording("./data/getAllDataFromCamera_3.aedat4")
 
 # Get and print the camera name that data from recorded from
 print(f"Opened an AEDAT4 file which contains data from [{reader.getCameraName()}] camera")

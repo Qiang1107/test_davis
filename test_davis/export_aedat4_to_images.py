@@ -3,10 +3,10 @@ import cv2 as cv
 import os
 from datetime import timedelta
 
-reader = dv.io.MonoCameraRecording("./test_davis/data/getAllDataFromCamera_4.aedat4")
+reader = dv.io.MonoCameraRecording("./data/getAllDataFromCamera_5.aedat4")
 
 # 保存图片和视频的目录
-output_dir = "./test_davis/data/outputImage_getAllDataFromCamera_4"
+output_dir = "./data/outputImage_getAllDataFromCamera_5"
 os.makedirs(output_dir, exist_ok=True)
 
 # 为视频创建子文件夹
@@ -70,7 +70,6 @@ def display_preview(data):
         return
 
     if len(events) > 0:
-        print(f"********************************************** \n [{events.shape}]")
         event_image = visualizer.generateImage(events)
         event_image = cv.resize(event_image, (latest_image.shape[1], latest_image.shape[0]))
         # cv.imshow("Event Preview", event_image)
@@ -98,7 +97,8 @@ def display_preview(data):
 def main():
     slicer.doEveryTimeInterval(timedelta(milliseconds=33), display_preview)
 
-    while reader.isRunning():
+    # while reader.isRunning():
+    while True:
         events = reader.getNextEventBatch()
         if events is not None:
             slicer.accept("events", events)

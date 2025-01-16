@@ -16,7 +16,7 @@ parser.add_argument("-c",
 parser.add_argument("-o",
                     "--output_path",
                     dest='output_path',
-                    default="./test_davis/data/getAllDataFromCamera_4.aedat4",
+                    default="./data/getAllDataFromCamera_5.aedat4",
                     type=str,
                     help="Path to an output aedat4 file for writing.")
 args = parser.parse_args()

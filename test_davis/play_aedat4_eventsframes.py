@@ -3,7 +3,7 @@ import cv2 as cv
 from datetime import timedelta
 
 # capture = dv.io.CameraCapture("", dv.io.CameraCapture.CameraType.DAVIS)
-reader = dv.io.MonoCameraRecording("./test_davis/data/getAllDataFromCamera_4.aedat4")
+reader = dv.io.MonoCameraRecording("./data/getAllDataFromCamera_4.aedat4")
 
 # Callback method for time based slicing
 def display_preview(data):

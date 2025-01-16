@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser(description='Save aedat4 data to csv.')
 parser.add_argument('-f,--file',
                     dest='file',
                     type=str,
-                    default="./test_davis/data/getAllDataFromCamera_4.aedat4",
+                    default="./data/getAllDataFromCamera_4.aedat4",
                     metavar='path/to/file',
                     help='Path to an AEDAT4 file')
 

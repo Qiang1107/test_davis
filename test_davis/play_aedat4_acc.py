@@ -10,7 +10,7 @@ parser.add_argument('-f,--file',
                     dest='file',
                     type=str,
                     required=False,
-                    default='./test_davis/data/dvSave-2025_01_13_18_24_11.aedat4',
+                    default='./data/dvSave-2025_01_13_18_24_11.aedat4',
                     metavar='path/to/file',
                     help='Path to an AEDAT4 file')
 
